@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "google_calendar_watcher",
+  "version": "1.0.0",
+  "description": "Cloud Function to watch Google Calendar events.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "bin/deploy",
+    "emulator-start": "functions start",
+    "emulator-status": "functions status",
+    "emulator-call": "functions call watchGoogleCalendar --data '{}'",
+    "emulator-deploy": "functions deploy watchGoogleCalendar --trigger-http",
+    "emulator-log": "functions logs read --limit=100",
+    "init": "node init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nownabe/google_calendar_watcher.git"
+  },
+  "author": "nownabe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nownabe/google_calendar_watcher/issues"
+  },
+  "homepage": "https://github.com/nownabe/google_calendar_watcher#readme",
+  "dependencies": {
+    "google-auth-library": "^0.11.0",
+    "googleapis": "^22.2.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.25"
+  }
+}

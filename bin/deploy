@@ -1,0 +1,9 @@
+#!/bin/bash
+
+[[ -f .env ]] && . .env
+
+gcloud beta functions deploy \
+  watchGoogleCalendar \
+  --region ${region:-us-central1} \
+  --stage-bucket $stage_bucket \
+  --trigger-http
